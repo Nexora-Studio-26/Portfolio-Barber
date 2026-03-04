@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Premium barbershop offering precision haircuts, beard trims, and luxury grooming for the modern gentleman." />
+  <meta name="keywords" content="barbershop, haircut, beard trim, luxury grooming, premium barber" />
+  <title>OBSIDIAN BARBER | Premium Grooming Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">OBSIDIAN</a>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <a href="#booking" class="btn btn-gold nav-book">Book Now</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div class="nav-mobile" id="mobileMenu">
+      <ul>
+        <li><a href="#hero" onclick="closeMenu()">Home</a></li>
+        <li><a href="#services" onclick="closeMenu()">Services</a></li>
+        <li><a href="#gallery" onclick="closeMenu()">Gallery</a></li>
+        <li><a href="#about" onclick="closeMenu()">About</a></li>
+        <li><a href="https://wa.me/15551234567" target="_blank" rel="noopener" class="btn btn-outline">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- STICKY MOBILE BOOK BUTTON -->
+  <a href="#booking" class="sticky-book-btn" id="stickyBook">Book Appointment</a>
+
+  <!-- WHATSAPP BUTTON -->
+  <a href="https://wa.me/15551234567" target="_blank" rel="noopener" class="whatsapp-btn" aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-image" style="background-image:url('https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=1800&q=80&auto=format&fit=crop')"></div>
+    <div class="hero-content fade-in">
+      <p class="hero-tagline">EST. 2015 · NEW YORK</p>
+      <h1 class="hero-logo-text">OBSIDIAN</h1>
+      <div class="hero-divider"></div>
+      <h2 class="hero-headline">Precision.<br>Style.<br>Confidence.</h2>
+      <p class="hero-sub">Premium grooming experience for modern gentlemen.</p>
+    
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">What We Offer</span>
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-sub">Every cut is a statement. Every visit, an experience.</p>
+      </div>
+      <div class="services-grid fade-in">
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M9 6L12 3L15 6M12 3V15M9 18L12 21L15 18M5 9L2 12L5 15M2 12H14M19 9L22 12L19 15M22 12H14"/>
+            </svg>
+          </div>
+          <h3>Haircut</h3>
+          <p>Classic or modern. Tailored to your face and style.</p>
+          <div class="service-price">$20</div>
+          <a href="#booking" class="btn-text">Book Now →</a>
+        </div>
+
+        <div class="service-card featured">
+          <div class="service-badge">Most Popular</div>
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="12" cy="8" r="5"/>
+              <path d="M3 21c0-4.5 4-8 9-8s9 3.5 9 8"/>
+              <path d="M8 14s1 3 4 3 4-3 4-3"/>
+            </svg>
+          </div>
+          <h3>Haircut + Beard</h3>
+          <p>The full gentleman's package. Look complete, feel powerful.</p>
+          <div class="service-price">$30</div>
+          <a href="#booking" class="btn-text">Book Now →</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2C9 2 7 4 7 7c0 2 1 4 3 5v2H8l-1 4h10l-1-4h-2v-2c2-1 3-3 3-5 0-3-2-5-5-5z"/>
+            </svg>
+          </div>
+          <h3>Beard Trim</h3>
+          <p>Shape, define, and perfect your facial hair with precision.</p>
+          <div class="service-price">$15</div>
+          <a href="#booking" class="btn-text">Book Now →</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 5C9.5 5 7 7 7 10c0 2 1 3.5 2.5 4.5V16H9l-.5 3h7L15 16h-1.5v-1.5C15 13.5 17 12 17 10c0-3-2.5-5-5-5z"/>
+            </svg>
+          </div>
+          <h3>Kids Haircut</h3>
+          <p>Patient, careful cuts for the young gentlemen in your life.</p>
+          <div class="service-price">$18</div>
+          <a href="#booking" class="btn-text">Book Now →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Our Work</span>
+        <h2 class="section-title">The Gallery</h2>
+        <p class="section-sub">Craftsmanship speaks louder than words.</p>
+      </div>
+    </div>
+    <div class="gallery-grid fade-in">
+      <div class="gallery-item tall">
+        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?w=800&q=80&auto=format&fit=crop" alt="Barber precision cut" loading="lazy" />
+        <div class="gallery-overlay"><span>Precision Cut</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=800&q=80&auto=format&fit=crop" alt="Beard styling" loading="lazy" />
+        <div class="gallery-overlay"><span>Beard Craft</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=800&q=80&auto=format&fit=crop" alt="Barber tools" loading="lazy" />
+        <div class="gallery-overlay"><span>The Tools</span></div>
+      </div>
+      <div class="gallery-item wide">
+        <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?w=1200&q=80&auto=format&fit=crop" alt="Shop interior" loading="lazy" />
+        <div class="gallery-overlay"><span>Our Space</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=800&q=80&auto=format&fit=crop" alt="Client transformation" loading="lazy" />
+        <div class="gallery-overlay"><span>Transformation</span></div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?w=800&q=80&auto=format&fit=crop" alt="Modern fade" loading="lazy" />
+        <div class="gallery-overlay"><span>Modern Fade</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Client Words</span>
+        <h2 class="section-title">What They Say</h2>
+      </div>
+      <div class="testimonials-grid fade-in">
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Best barber in the city. I've been coming here for 3 years and I won't go anywhere else. The attention to detail is unmatched."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JM</div>
+            <div>
+              <strong>James M.</strong>
+              <span>Financial Analyst</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Walking out of Obsidian, I feel like a different man. The vibe, the skill, the service — absolute perfection every single time."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AR</div>
+            <div>
+              <strong>Alex R.</strong>
+              <span>Creative Director</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"The haircut + beard combo changed how I present myself at work. Premium experience, premium results. Worth every dollar."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">DK</div>
+            <div>
+              <strong>David K.</strong>
+              <span>Entrepreneur</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container about-inner">
+      <div class="about-image-wrap fade-in">
+        <img src="https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=800&q=80&auto=format&fit=crop" alt="Master barber at work" loading="lazy" />
+        <div class="about-image-border"></div>
+      </div>
+      <div class="about-content fade-in">
+        <span class="section-tag">Our Story</span>
+        <h2 class="section-title">Craftsmanship.<br>Passion. Tradition.</h2>
+        <p>At Obsidian, we believe a great haircut is more than appearance — it's confidence. Founded on the principles of precision and respect for the craft, our barbers bring years of mastery to every chair.</p>
+        <p>We honor the traditions of classic barbering while embracing the styles of today. Each client receives our full attention, our sharpest tools, and our highest standard of care.</p>
+        <div class="about-stats">
+          <div class="stat">
+            <span class="stat-num">10+</span>
+            <span class="stat-label">Years of Craft</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">5K+</span>
+            <span class="stat-label">Happy Clients</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">4</span>
+            <span class="stat-label">Master Barbers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION & HOURS -->
+  <section class="location" id="location">
+    <div class="container">
+      <div class="section-header fade-in">
+        <span class="section-tag">Find Us</span>
+        <h2 class="section-title">Location & Hours</h2>
+      </div>
+      <div class="location-grid fade-in">
+        <div class="location-info">
+          <div class="info-block">
+            <h3>Address</h3>
+            <p>248 West 23rd Street<br>New York, NY 10011</p>
+            <a href="tel:+15551234567" class="click-to-call">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              +1 (555) 123-4567
+            </a>
+          </div>
+          <div class="info-block">
+            <h3>Opening Hours</h3>
+            <table class="hours-table">
+              <tr><td>Monday – Friday</td><td>9:00 AM – 8:00 PM</td></tr>
+              <tr><td>Saturday</td><td>8:00 AM – 7:00 PM</td></tr>
+              <tr><td>Sunday</td><td>10:00 AM – 5:00 PM</td></tr>
+            </table>
+          </div>
+        </div>
+        <div class="map-wrap">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.6153182327!2d-74.0004!3d40.7449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQ0JzQxLjYiTiA3NMKwMDAnMDEuNCJX!5e0!3m2!1sen!2sus!4v1234567890"
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Obsidian Barber location map">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="cta-final" id="booking">
+    <div class="cta-content fade-in">
+      <span class="section-tag light">Don't Wait</span>
+      <h2>Ready for Your<br>Next Look?</h2>
+      <p>Your transformation is one appointment away. Book today.</p>
+      <div class="cta-buttons">
+        <a href="https://wa.me/15551234567" target="_blank" rel="noopener" class="btn btn-outline">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
+      
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">OBSIDIAN</span>
+        <p>Premium grooming for the modern gentleman.</p>
+        <div class="footer-socials">
+          <a href="#" aria-label="Instagram">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+          <a href="#" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#location">Location</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>248 West 23rd Street<br>New York, NY 10011</p>
+        <a href="tel:+15551234567">+1 (555) 123-4567</a>
+        <a href="mailto:hello@obsidianbarber.com">hello@obsidianbarber.com</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Obsidian Barber. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
